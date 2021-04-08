@@ -1,0 +1,107 @@
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+void sort(int data[],int data_num);
+void sort(float data[],int data_num);
+void sort(string data[],int data_num);
+int main(void)
+{
+	int data_num;
+	char data_type;
+	int t;
+	cout<<"请输入将比较的元素个数"<<endl;
+	cin>>data_num;
+	cout<<"请说明数据类型：整形（a)，浮点型（b)或者是字符串型(c)"<<endl;
+	cin>>data_type;
+	if(data_type=='a')
+  {
+		int data[data_num];
+		cout<<"请输入"<<endl;
+		for(t=0;t<data_num;t++)
+		{
+			
+			cin>>data[t];}
+		cout<<"结果"<<endl;
+		sort(data,data_num);}
+	if(data_type=='b')
+	{
+		float data[data_num];
+		cout<<"请输入"<<endl;
+		for(t=0;t<data_num;t++)
+		{
+			
+			cin>>data[t];}
+			cout<<"结果"<<endl;
+		sort(data,data_num);}
+	if(data_type=='c')
+	{
+		string data[data_num];
+		cout<<"请输入"<<endl;
+		for(t=0;t<data_num;t++)
+		{
+			
+			cin>>data[t];}
+			cout<<"结果"<<endl;
+		sort(data,data_num);}
+	
+
+	return 0;
+void sort(int data[],int data_num)
+{
+	int temp=data[0];
+	for(int i=0;i<data_num;i++)
+	{
+		for(int j=i+1;j<data_num;j++)
+		{
+			if(data[i]>data[j])
+			{
+				temp=data[j];
+				data[j]=data[i];
+				data[i]=temp;}
+		}
+	}
+	for(int i=0;i<data_num;i++)
+	{
+		cout<<data[i]<<endl;
+	}
+}
+void sort(float data[],int data_num)
+{
+	float temp=data[0];
+	for(int i=0;i<data_num;i++)
+	{
+		for(int j=i+1;j<data_num;j++)
+		{
+			if(data[i]>data[j])
+			{
+				temp=data[j];
+				data[j]=data[i];
+				data[i]=temp;}
+		}
+	}
+	for(int i=0;i<data_num;i++)
+	{
+		cout<<data[i]<<endl;
+	}
+}
+void sort(string data[],int data_num)
+{
+	string temp=data[0];
+	for(int i=0;i<data_num;i++)
+	{
+		for(int j=i+1;j<data_num;j++)
+		{
+			if(data[i]>data[j])
+			{
+				temp=data[j];
+				data[j]=data[i];
+				data[i]=temp;}
+		}
+	}
+	for(int i=0;i<data_num;i++)
+	{
+		cout<<data[i]<<endl;
+	}
+  }
